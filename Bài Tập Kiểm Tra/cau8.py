@@ -1,0 +1,10 @@
+x = int(input("Nhập x: "))
+y = int(input("Nhập y: "))
+z = int(input("Nhập z: "))
+tich = x * y * z
+print(f"Tích ({x} * {y} * {z}) = {tich}")
+s_tich = str(tich)
+so_chu_so = len(s_tich)
+chu_so_max = max(s_tich)
+print(f"Số lượng chữ số: {so_chu_so}")
+print(f"Chữ số lớn nhất: {chu_so_max}")

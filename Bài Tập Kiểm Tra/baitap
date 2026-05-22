@@ -1,0 +1,24 @@
+def tach_du_lieu():
+    try:
+        with open("input.txt", "r", encoding="utf-8") as f_in:
+            noi_dung = f_in.read()
+        chuoi_so = ""
+        chuoi_chu = ""
+        for char in noi_dung:
+            if char.isdigit():      
+                chuoi_so += char
+            elif char.isalpha():    
+                chuoi_chu += char
+            elif char.isspace():    
+                chuoi_so += char
+                chuoi_chu += char
+        with open("outso.txt", "w", encoding="utf-8") as f_so:
+            f_so.write(chuoi_so.strip())
+
+        with open("outchu.txt", "w", encoding="utf-8") as f_chu:
+            f_chu.write(chuoi_chu.strip())
+
+        print("Đã tách dữ liệu thành công!")
+        print("Lỗi: Không tìm thấy file input.txt")
+if __name__ == "__main__":
+    tach_du_lieu()
